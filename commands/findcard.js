@@ -34,7 +34,7 @@ module.exports = {
           cardcheck.then((cards) => {
               for (var k in cards){
                   if (k.name !== args[0]){
-                    console.log(`wasnt it ${k.name}`)
+                    console.log(`wasnt it ${k}`)
                   }else{
                       console.log('wasnt omgdfsga')
                   }
