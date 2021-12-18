@@ -28,7 +28,7 @@ module.exports = {
         .setDescription(`Looking for ${args[0]}'s card...`)
         .setAuthor(message.member.displayName)
         var foundedcard = {}
-        message.channel.send(embed);
+        const thing = message.channel.send(embed);
         var cardid = 0
         var cardcheck = trello.getCardsOnList("61bd35b62c639428cafcd102");
           cardcheck.then((cards) => {
@@ -45,6 +45,7 @@ module.exports = {
           console.log(cardid)
           setTimeout(() => {
             if (cardid == 0){
+                thing.delete()
                 const embed1 = new Discord.MessageEmbed();
                 embed1
                 .setColor("#2f3137")
@@ -52,6 +53,7 @@ module.exports = {
                 .setAuthor(message.member.displayName)
                 return message.channel.send(embed1)
             }else{
+                thing.delete()
                 const embed2 = new Discord.MessageEmbed();
                 embed2
 
