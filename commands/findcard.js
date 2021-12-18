@@ -1,7 +1,8 @@
 // init require
 const Discord = require('discord.js');
-var Trello = require('trello-node-api')("42197ba326f25b368f77f7be9adb0fbd", "5c9074bc7cc291655ba6dce70e75a4357ba993a4b6ed45fa0bea9b4004853288");
-const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+var Trello = require('trello')
+var trello = new Trello("42197ba326f25b368f77f7be9adb0fbd", "5c9074bc7cc291655ba6dce70e75a4357ba993a4b6ed45fa0bea9b4004853288");
+//const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 // export module
 module.exports = {
@@ -43,15 +44,6 @@ module.exports = {
             .setDescription("Thank you, your request has been submitted and the buggy will be driving to your location ASAP. Please be patient and remain where you are until the buggy arrives. Abusing this feature will result in a temporary ban or mute in the Discord Server.")
             .setAuthor(message.member.displayName)
             message.channel.send(embed2);
-
-            let data = {
-                name: message.member.displayName,
-                desc: location,
-                pos: 'top',
-                idList: '61988cbca635ce6a79f38d95'
-            };
-
-            const card = Trello.card.create(data);
         })
 	}
 }

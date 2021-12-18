@@ -16,6 +16,7 @@
     "cheerio": "^1.0.0-rc.3",
     "discord.js": "^12.5.3",
     "express": "^4.17.1",
+    "trello": "^0.11.0",
     "trello-node-api": "^0.0.9"
   },
   "devDependencies": {
