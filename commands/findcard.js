@@ -27,7 +27,7 @@ module.exports = {
         .setColor("#2f3137")
         .setDescription(`Looking for ${args[0]}'s card...`)
         .setAuthor(message.member.displayName)
-
+        var foundedcard = {}
         message.channel.send(embed);
         var cardid = 0
         var cardcheck = trello.getCardsOnList("61bd35b62c639428cafcd102");
@@ -38,6 +38,7 @@ module.exports = {
                       console.log('found')
                       cardid = card.id
                       console.log(cardid)
+                      foundedcard = card
                   }
               }
           })
@@ -51,7 +52,18 @@ module.exports = {
                 .setAuthor(message.member.displayName)
                 return message.channel.send(embed1)
             }else{
-                
+                const embed2 = new Discord.MessageEmbed();
+                embed2
+
+                .setColor("#2f3137")
+                .setDescription(`**Found a Card matching ${args[0]}**`)
+                .addFields(
+                    { name: 'Card Name', value: args[0], inline: true },
+                    { name: 'Balance', value: foundedcard.desc, inline: true },
+                )
+                .setAuthor(message.member.displayName)
+
+                return message.channel.send(embed2)
             }
           }, 1000);
 	}
