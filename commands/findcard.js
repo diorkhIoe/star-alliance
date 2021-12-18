@@ -42,10 +42,10 @@ module.exports = {
                   }
               }
           })
+          thing.delete({ timeout: 1000 })
           console.log(cardid)
           setTimeout(() => {
             if (cardid == 0){
-                thing.delete()
                 const embed1 = new Discord.MessageEmbed();
                 embed1
                 .setColor("#2f3137")
@@ -53,7 +53,6 @@ module.exports = {
                 .setAuthor(message.member.displayName)
                 return message.channel.send(embed1)
             }else{
-                thing.delete()
                 const embed2 = new Discord.MessageEmbed();
                 embed2
 
