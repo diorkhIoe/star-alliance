@@ -16,6 +16,8 @@ module.exports = {
 		if (!message.member.roles.cache.has('909944484186451988')){
             return message.channel.send(`You don't have the permission to use this command`)
         }
+        console.log(args[0])
+        console.log(args[1])
         if (!args[1]){
             return message.channel.send(`Tell me the name of whom you'd like to search.`)
         }
