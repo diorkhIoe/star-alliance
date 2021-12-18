@@ -33,6 +33,11 @@ module.exports = {
         const filter = (m) => m.author.id === message.author.id;
         const collector = message.channel.createMessageCollector(filter, { max: 1, time: 45000 })
 
+        var cardcheck = trello.getCardsOnList("61bd35b62c639428cafcd102");
+          cardcheck.then((cards) => {
+              console.log(cards)
+          })
+
         collector.on('collect', (msg) => {
             if (msg.content == "cancel"){return message.channel.send('Prompt Failed: Author cancelled')}
             console.log(msg.content)
