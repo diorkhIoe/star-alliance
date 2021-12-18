@@ -11,12 +11,6 @@ module.exports = {
 	admin : false,
 	nsfw : false,
 	async execute(client,message,args){
-		if (!message.member.roles.cache.has('909944484186451988')){
-            return message.channel.send(`You don't have the permission to use this command`)
-        }
-        if (!args[0]){
-            return message.channel.send(`Tell me the name of whom you'd like to search.`)
-        }
 
         const embed = new Discord.MessageEmbed();
         embed
