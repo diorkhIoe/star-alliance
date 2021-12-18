@@ -41,6 +41,7 @@ module.exports = {
                   }
               }
           })
+          console.log(cardid)
         if (cardid == 0){
             const embed1 = new Discord.MessageEmbed();
             embed1
