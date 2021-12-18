@@ -3,7 +3,7 @@ const botClient = require("./structures/botClient");
 const client = new botClient();
 const owner = process.env.Owner;
 const prefix = process.env.Prefix;
-const Token = process.env.Token; 
+const Token = process.env.token; 
 
 const fs = require('fs');
 const cmdir = './commands';
