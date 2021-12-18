@@ -26,7 +26,6 @@ module.exports = {
         embed
         .setColor("#2f3137")
         .setDescription(`Looking for ${args[0]}'s card...`)
-        .setAuthor(message.member.displayName)
         var foundedcard = {}
         message.channel.send(embed);
         var cardid = 0
@@ -49,7 +48,7 @@ module.exports = {
                 embed1
                 .setColor("#2f3137")
                 .setDescription(`Couldn't find a card.`)
-                .setAuthor(message.member.displayName)
+                .setFooter(`Requested by ${message.member.displayName}`)
                 return message.channel.send(embed1)
             }else{
                 const embed2 = new Discord.MessageEmbed();
