@@ -1,0 +1,24 @@
+{
+  "name": "master-bot",
+  "version": "1.0.0",
+  "description": "just dumies bot",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node bin/dev.js"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "GB_Sources, Santoso",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "discord.js": "^12.5.3",
+    "express": "^4.17.1",
+    "trello-node-api": "^0.0.9"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
