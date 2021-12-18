@@ -17,6 +17,7 @@ module.exports = {
         .setColor("#2f3137")
         .setTitle(`:grey_exclamation: A Member of the Star Alliance`)
         .setDescription(`${message.guild.name} is a member of the Star Alliance.`)
+		.setURL('https://www.roblox.com/groups/13264499/Star-Alliance#!/about')
         message.channel.send(embed);
 	}
 }
