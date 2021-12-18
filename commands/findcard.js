@@ -48,6 +48,7 @@ module.exports = {
             .setColor("#2f3137")
             .setDescription(`Couldn't find a card.`)
             .setAuthor(message.member.displayName)
+            message.channel.send(embed1)
         }
 	}
 }
