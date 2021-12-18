@@ -76,7 +76,7 @@ client.on('message', message => {
 client.once('ready', () => {
 	console.log(client.user.username+' is Ready!');
 	client.user.setActivity("Game"); 
-	client.user.setPresence({ status: 'online', activity: { name: 'with flyer miles.', type: 'PLAYING'} })
+	client.user.setPresence({ status: 'online', activity: { name: `with ${client.guilds.cache.size} allies.`, type: 'PLAYING'} })
 });
 
 client.login(Token)
