@@ -42,13 +42,17 @@ module.exports = {
               }
           })
           console.log(cardid)
-        if (cardid == 0){
-            const embed1 = new Discord.MessageEmbed();
-            embed1
-            .setColor("#2f3137")
-            .setDescription(`Couldn't find a card.`)
-            .setAuthor(message.member.displayName)
-            message.channel.send(embed1)
-        }
+          setTimeout(() => {
+            if (cardid == 0){
+                const embed1 = new Discord.MessageEmbed();
+                embed1
+                .setColor("#2f3137")
+                .setDescription(`Couldn't find a card.`)
+                .setAuthor(message.member.displayName)
+                return message.channel.send(embed1)
+            }else{
+                
+            }
+          }, 1000);
 	}
 }
