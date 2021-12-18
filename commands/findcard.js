@@ -16,7 +16,7 @@ module.exports = {
 		if (!message.member.roles.cache.has('909944484186451988')){
             return message.channel.send(`You don't have the permission to use this command`)
         }
-        if (!args[2]){
+        if (!args[1]){
             return message.channel.send(`Tell me the name of whom you'd like to search.`)
         }
 
@@ -24,7 +24,7 @@ module.exports = {
 
         embed
         .setColor("#2f3137")
-        .setDescription(`Looking for ${args[2]}'s card...'`)
+        .setDescription(`Looking for ${args[1]}'s card...'`)
         .setAuthor(message.member.displayName,"https://cdn.discordapp.com/attachments/921164387325214810/921566118194348072/star_alliance_logo.png")
 
         message.channel.send(embed);
