@@ -39,7 +39,7 @@ module.exports = {
 			.setColor(color.hack)
 			.setAuthor(`${client.user.username} | Help & About`)
 			.setDescription(
-				`**List of command:**\n${header}\`\`\`css\n${cm.filter(e => {return e !== null} ).join("\n")}\`\`\`\n`
+				`**List of commands:**\n${header}\`\`\`css\n${cm.filter(e => {return e !== null} ).join("\n")}\`\`\`\n`
 				)
 
 			return message.channel.send(embed);
