@@ -24,8 +24,8 @@ module.exports = {
 
         embed
         .setColor("#2f3137")
-        .setDescription(`Looking for ${args[0]}'s card...'`)
-        .setAuthor(message.member.displayName,"https://cdn.discordapp.com/attachments/921164387325214810/921566118194348072/star_alliance_logo.png")
+        .setDescription(`Looking for ${args[0]}'s card...`)
+        .setAuthor(message.member.displayName)
 
         message.channel.send(embed);
 
@@ -39,9 +39,9 @@ module.exports = {
 
             const embed2 = new Discord.MessageEmbed();
             embed2
-            .setColor("#c99666")
+            .setColor("#2f3137")
             .setDescription("Thank you, your request has been submitted and the buggy will be driving to your location ASAP. Please be patient and remain where you are until the buggy arrives. Abusing this feature will result in a temporary ban or mute in the Discord Server.")
-            .setAuthor("Turkish Airlines Corporate Services","https://cdn.discordapp.com/attachments/921164387325214810/921566118194348072/star_alliance_logo.png")
+            .setAuthor(message.member.displayName)
             message.channel.send(embed2);
 
             let data = {
