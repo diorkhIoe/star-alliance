@@ -38,6 +38,8 @@ module.exports = {
                     console.log(`wasnt it ${card}`)
                   }else{
                       console.log('this is it')
+                      var cardid = card.id
+                      console.log(cardid)
                   }
               }
           })
