@@ -29,19 +29,24 @@ module.exports = {
         .setAuthor(message.member.displayName)
 
         message.channel.send(embed);
-
+        var cardid = 0
         var cardcheck = trello.getCardsOnList("61bd35b62c639428cafcd102");
           cardcheck.then((cards) => {
               for (var k in cards){
                   var card = cards[k]
-                  if (card.name !== args[0]){
-                    console.log(`wasnt it ${card}`)
-                  }else{
-                      console.log('this is it')
-                      var cardid = card.id
+                  if (card.name == args[0]){
+                      console.log('found')
+                      cardid = card.id
                       console.log(cardid)
                   }
               }
           })
+        if (cardid == 0){
+            const embed1 = new Discord.MessageEmbed();
+            embed1
+            .setColor("#2f3137")
+            .setDescription(`Couldn't find a card.`)
+            .setAuthor(message.member.displayName)
+        }
 	}
 }
