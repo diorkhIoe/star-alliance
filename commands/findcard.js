@@ -28,7 +28,7 @@ module.exports = {
         .setDescription(`Looking for ${args[0]}'s card...`)
         .setAuthor(message.member.displayName)
         var foundedcard = {}
-        const thing = message.channel.send(embed);
+        message.channel.send(embed);
         var cardid = 0
         var cardcheck = trello.getCardsOnList("61bd35b62c639428cafcd102");
           cardcheck.then((cards) => {
@@ -42,7 +42,6 @@ module.exports = {
                   }
               }
           })
-          thing.delete({ timeout: 1000 })
           console.log(cardid)
           setTimeout(() => {
             if (cardid == 0){
