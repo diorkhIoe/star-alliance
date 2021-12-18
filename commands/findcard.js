@@ -37,7 +37,7 @@ module.exports = {
                   if (card.name !== args[0]){
                     console.log(`wasnt it ${card}`)
                   }else{
-                      console.log('wasnt omgdfsga')
+                      console.log('this is it')
                   }
               }
           })
