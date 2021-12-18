@@ -61,7 +61,7 @@ module.exports = {
                     { name: 'Card Name', value: args[0], inline: true },
                     { name: 'Balance', value: foundedcard.desc, inline: true },
                 )
-                .setAuthor(message.member.displayName)
+                .setFooter(`Requested by ${message.member.displayName}`)
 
                 return message.channel.send(embed2)
             }
