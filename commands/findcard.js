@@ -30,30 +30,15 @@ module.exports = {
 
         message.channel.send(embed);
 
-        const filter = (m) => m.author.id === message.author.id;
-        const collector = message.channel.createMessageCollector(filter, { max: 1, time: 45000 })
-
         var cardcheck = trello.getCardsOnList("61bd35b62c639428cafcd102");
           cardcheck.then((cards) => {
-              console.log(cards)
               for (var k in cards){
                   if (k.name == args[0]){
                       console.log(`k.name is args[0]`)
+                  }else{
+                      console.log('wasnt it')
                   }
               }
           })
-
-        collector.on('collect', (msg) => {
-            if (msg.content == "cancel"){return message.channel.send('Prompt Failed: Author cancelled')}
-            console.log(msg.content)
-            var location = msg.content
-
-            const embed2 = new Discord.MessageEmbed();
-            embed2
-            .setColor("#2f3137")
-            .setDescription("Thank you, your request has been submitted and the buggy will be driving to your location ASAP. Please be patient and remain where you are until the buggy arrives. Abusing this feature will result in a temporary ban or mute in the Discord Server.")
-            .setAuthor(message.member.displayName)
-            message.channel.send(embed2);
-        })
 	}
 }
