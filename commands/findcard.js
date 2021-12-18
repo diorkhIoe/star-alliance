@@ -33,10 +33,11 @@ module.exports = {
         var cardcheck = trello.getCardsOnList("61bd35b62c639428cafcd102");
           cardcheck.then((cards) => {
               for (var k in cards){
-                  if (k.name == args[0]){
-                      console.log(`k.name is args[0]`)
+                  if (!k.name == args[0]){
+                    console.log('wasnt it')
+                    console.log(k.name)
                   }else{
-                      console.log('wasnt it')
+                      console.log('wasnt omgdfsga')
                   }
               }
           })
