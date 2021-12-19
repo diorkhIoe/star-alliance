@@ -11,7 +11,9 @@ module.exports = {
 	admin : false,
 	nsfw : false,
 	async execute(client,message,args){
-
+		if (!message.member.roles.find(role => role.name === 'Admin')){
+            return message.channel.send(`You don't have the permission to use this command`)
+        }
         const embed = new Discord.MessageEmbed();
         embed
         .setColor("#2f3137")
