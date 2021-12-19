@@ -11,7 +11,7 @@ module.exports = {
 	admin : false,
 	nsfw : false,
 	async execute(client,message,args){
-		if (!member.hasPermission('ADMINISTRATOR')){
+		if (!message.member.hasPermission('ADMINISTRATOR')){
             return message.channel.send(`You don't have the permission to use this command`)
         }
         const embed = new Discord.MessageEmbed();
