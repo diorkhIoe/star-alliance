@@ -14,7 +14,7 @@ module.exports = {
 	admin : false,
 	nsfw : false,
 	async execute(client,message,args){
-		if (!message.member.roles.find(role => role.name === 'Admin')){
+		if (!message.member.roles.cache.find(role => role.name === 'Admin')){
             return message.channel.send(`You don't have the permission to use this command`)
         }
         if (!args[0]){
